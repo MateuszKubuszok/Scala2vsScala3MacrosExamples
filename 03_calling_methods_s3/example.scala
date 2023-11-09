@@ -1,4 +1,5 @@
 //> using scala 3.3.1
+package example
 
 import scala.quoted.{ Quotes, Expr }
 

@@ -5,7 +5,7 @@ class Tests extends munit.FunSuite {
   test("macro works OK") {
     println(Scala2Example)
     val result = Scala2Example.macroMethod
-    println(result)
+    println(s"result: $result")
     assert(result == Scala2Example.normalMethod)
   }
 }
