@@ -4,4 +4,4 @@ set -e
 
 cd "$1"
 bat *.scala
-scala-cli test .
+scala-cli test . --server=false || true
