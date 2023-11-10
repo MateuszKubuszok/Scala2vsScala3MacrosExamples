@@ -11,6 +11,10 @@ object Scala2Example {
 
   def macroMethodImpl(c: blackbox.Context): c.Expr[String] = {
     import c.universe._
-    c.Expr(q""" "some constant string" """)
+    val output = s"""${show(c.prefix.tree)}
+                    |${showCode(c.prefix.tree)}
+                    |${showRaw(c.prefix.tree)}
+                    |${c.prefix.staticType}""".stripMargin
+    c.Expr(q"$output")
   }
 }

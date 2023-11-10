@@ -11,7 +11,7 @@ class Scala2Example {
 }
 object Scala2Example {
   def macroMethodImpl(c: blackbox.Context): c.Expr[String] = {
-  	import c.universe._
+    import c.universe._
     c.Expr(q""" "some constant string" """)
   }
 }

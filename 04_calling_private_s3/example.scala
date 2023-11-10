@@ -4,7 +4,7 @@ package example
 import scala.quoted.{ Quotes, Expr }
 
 object Scala3Example {
-  def normalMethod: String = "method result"
+  private def normalMethod: String = "method result"
 
   inline def macroMethod: String =
     ${ Scala3Example.macroMethodImpl }
