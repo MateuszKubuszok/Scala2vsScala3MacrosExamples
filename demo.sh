@@ -3,5 +3,5 @@
 set -e
 
 cd "$1"
-bat *.scala
+BAT_PAGING=never bat *.scala
 scala-cli test . --server=false || true
